@@ -1,0 +1,10 @@
+body {
+  background-color: whitesmoke;
+  text-align: center;
+}
+
+#game {
+  display: inline-block;
+  text-align: center;
+  background-color: blue;
+}
