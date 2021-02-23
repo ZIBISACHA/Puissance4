@@ -7,26 +7,34 @@ var currentPlayer = 1;
 var columns_;
 var rows_;
 
-function vertical_check()
+function vertical_check(column, row)
+{
+    var count = 0;
+    // up
+    for (var i = row; i >= 0; i++)
+    {
+        if (board[column][i] === currentPlayer)
+        {
+            
+        }
+    }
+}
+
+function horizontal_check(column, row)
 {
 
 }
 
-function horizontal_check()
+function diagonal_check(column, row)
 {
 
 }
 
-function diagonal_check()
+function check_win(column, row)
 {
-
-}
-
-function check_win()
-{
-    vertical_check();
-    horizontal_check();
-    diagonal_check();
+    vertical_check(column, row);
+    horizontal_check(column, row);
+    diagonal_check(column, row);
 }
 
 function createBoard(columns, rows)
@@ -68,5 +76,5 @@ function play(column)
     if (board[column][row] === 0)
         board[column][row] = currentPlayer;
     console.log(board);
-    check_win();
+    check_win(column, row);
 }
